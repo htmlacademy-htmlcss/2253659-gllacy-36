@@ -7,10 +7,12 @@
 
   <body>
     <header class="page-header">
-      <nav class="navigation">
-        <a class="navigation-logo" href="#">
-          <img class="page-header-logo" src="#" alt="Логотип интернет-магазина мороженого 'GllacyShop'">
+        <a class="page-logo" href="#">
+          <img class="logo" src="#" alt="Логотип интернет-магазина мороженого 'GllacyShop'">
         </a>
+
+        <!-- Навигация по сайту -->
+      <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link catalog-list" href="catalog.html">Каталог</a>
@@ -24,10 +26,15 @@
             <a class="navigation-link" href="#">О компании</a>
           </li>
         </ul>
+      </nav>
 
-        <div class="navigation-number">
-          <b class="phone-number">+7 800 555-86-28</b>
+
+        <div class="contact">
+          <b><a class="contact-phone" href="tel:+78005558628">+7 800 555-86-28</a></b>
         </div>
+
+        <!-- Пользовательская информация -->
+      <nav class="navigation">
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -49,6 +56,99 @@
         </ul>
       </nav>
     </header>
+
+    <main class="main-index">
+      <section class="slider">
+
+        <!-- Информация о выбранном товаре\\ будет меняться в стилизации -->
+        <h2 class="visually-hidden">Промо-товары</h2>
+        <h3 class="promo-title">
+            Нежный пломбир <br>с клубничным джемом
+        </h3>
+        <p class="promo-description">
+            Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.
+        </p>
+
+        <button class="slider-btn btn-prev" type="button">
+          <span class="visually-hidden">Предыдущее мороженое</span>
+        </button>
+        <img class="slider-img" src="#" alt="Текущий вариант мороженого">
+        <button class="slider-btn btn-next" type="button">
+          <span class="visually-hidden">Следующее мороженое</span>
+        </button>
+
+        <!-- Список фоновых изображений мороженого из слайдера -->
+        <ol class="bg-images-list">
+          <li class="bg-images-item">
+            <img class="bg-image" src="#" alt="Мороженое">
+          </li>
+          <li class="bg-images-item">
+            <img class="bg-image" src="#" alt="Мороженое">
+          </li>
+        </ol>
+        <a class="button order-button" href="#">Заказать</a>
+
+        <!-- Блок с обозначением порядка выбранного элемента слайдера с возможностью быстрого перехода -->
+        <ol class="slider-pagination">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button slider-pagination-current" type="button">
+              <span class="visually-hidden">Мороженое 1</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">Мороженое 2</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">Мороженое 3</span>
+            </button>
+          </li>
+        </ol>
+
+        <!-- Блок социальных сетей -->
+        <ul class="social">
+          <li class="social-item">
+            <a class="telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Vk</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Разметка блока с акциями -->
+      <h2 class="visually-hidden">Акция</h2>
+      <p class="sale-title">Заказывайте мороженое и получайте подарки!</p>
+
+      <section class="sale-item">
+        <h3 class="sale-item-title">Малинка даром!</h3>
+        <p class="sale-item-description">
+          При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
+        </p>
+        <a class="sale-item-button button" href="#">Хочу подарок</a>
+        <img src="#" alt="Малина в рожке" class="sale-item-img">
+      </section>
+      <section class="sale-item">
+        <h3 class="sale-item-title">Маршмеллоу даром!</h3>
+        <p class="sale-item-description">
+          При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
+        </p>
+        <a class="sale-item-button button" href="#">Хочу подарок</a>
+        <img src="#" alt="Маршмеллоу в рожке" class="sale-item-img">
+      </section>
+
+    </main>
 
   </body>
 </html>
