@@ -57,20 +57,14 @@ body {
     color: #2D3440;
 }
 
-/* ------------------------- шапка страницы ----------------------------------- */
-.page-header {
-    background-color: inherit;
-    color: inherit;
-}
-
 /* ------------------------- ссылки в навигации ------------------------------- */
 .navigation-link,
 .contact-phone {
     font-family: Inter, sans-serif;
     line-height: 20px;
     text-decoration: none;
-    color: inherit;
     text-align: center;
+    color: #2D3440;
 }
 
 /* ------------------------- промо-товары ------------------------------------- */
@@ -78,13 +72,11 @@ body {
     font-size: 36px;
     line-height: 46px;
     font-weight: 900;
-    color: inherit;
 }
 .promo-description {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: inherit;
 }
 .white-button {
     line-height: 20px;
@@ -103,14 +95,12 @@ body {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
-    color: inherit;
     text-align: center;
 }
 .sale-item-title {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-    color: inherit;
 }
 
 .sale-item {
@@ -126,7 +116,6 @@ body {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
-    color: inherit;
     text-align: center;
 }
 .product-card-title {
@@ -145,7 +134,6 @@ body {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
-    color: inherit;
 }
 .product-card-image {
     border-radius: 50%;
@@ -154,20 +142,18 @@ body {
 /* ------------------------- о магазине Глейси -------------------------------- */
 .about-container {
     display: flex;
-    background-image: url("../images/backgrounds/about.jpg");
-    background-color: bisque;
+    background-image: url(../images/backgrounds/about.jpg);
+    background-color: #FFFFFF;
     padding: 24px;
     border-radius: 16px;
 }
 .about-wrapper {
     background-color: #FFFFFF;
-    border-radius: inherit;
 }
 .about-title {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
-    color: inherit;
     text-align: center;
 }
 .adventages-item-description {
@@ -176,7 +162,7 @@ body {
 
 /* ---------------------------------- блог ------------------------------------- */
 .blog-container {
-    background-image: url("../images/backgrounds/blog.jpg");
+    background-image: url(../images/backgrounds/blog.jpg);
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     background-size: 570px auto;
@@ -226,7 +212,7 @@ body {
 
 /* ---------------------------------- доставка ---------------------------------- */
 .delivery-container {
-    background-image: url("../images/backgrounds/delivery.jpg");
+    background-image: url(../images/backgrounds/delivery.jpg);
     background-repeat: no-repeat;
     background-size: 1170px auto;
     background-color: #EEEEEE;
@@ -236,7 +222,6 @@ body {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
-    color: inherit;
 }
 .delivery-description,
 .delivery-form-description {
@@ -249,7 +234,7 @@ body {
 
 /* ---------------------------------- контакты ---------------------------------- */
 .contacts {
-    background-image: url("../images/backgrounds/contact.jpg");
+    background-image: url(../images/backgrounds/contact.jpg);
     background-repeat: no-repeat;
     background-size: 1170px auto;
     background-color: #EEEEEE;
