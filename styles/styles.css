@@ -47,14 +47,26 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
 
 /* ------------------------- основные стили для страницы----------------------- */
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 22px;
     background-color: #FEAFC3;
     color: #2D3440;
+}
+
+/* ---------------------------------- блок main ------------------------------- */
+.main-container {
+    flex-grow: 1;
 }
 
 /* ------------------------- ссылки в навигации ------------------------------- */
@@ -66,29 +78,133 @@ body {
     text-align: center;
     color: #2D3440;
 }
+.navigation-user {
+    font-size: 14px;
+}
+
+/* -------------------------------- хедер ------------------------------------- */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+    height: 104px;
+    margin: 0 auto;
+}
+.navigation-list,
+.navigation-left,
+.navigation-right {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    list-style-type: none;
+}
+.navigation-right,
+.navigation-user {
+    gap: 16px;
+}
+
+/* ------------------------- основной блок ------------------------------------ */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+    margin: 0 auto;
+    gap: 80px;
+}
 
 /* ------------------------- промо-товары ------------------------------------- */
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+    margin: 0;
+}
 .promo-title {
     font-size: 36px;
     line-height: 46px;
     font-weight: 900;
+    margin: 0;
+    width: 470px;
 }
 .promo-description {
+    width: 429px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 48px;
 }
 .white-button {
+    padding: 12px 32px;
     line-height: 20px;
     font-weight: 700;
     text-align: center;
     color: #2D3440;
     background-color: #FCFCFC;
-    border: 4px solid rgba(252, 252, 252, 0.4);
+    outline: 4px solid rgba(252, 252, 252, 0.4);
     border-radius: 26px;
     text-decoration: none;
 }
+.slider-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.background-slider-list {
+    gap: 41px;
+}
+
+.slider-button {
+    width: 38px;
+    height: 38px;
+}
+.slider-text-wrapper {
+    padding-left: 70px;
+    width: 470px;
+}
+.slider-images-wrapper {
+    margin: 0;
+    display: flex;
+}
+.slider-selected {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-slider-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.social {
+    display: flex;
+    margin: 0;
+    gap: 16px;
+    list-style-type: none;
+}
+.slider-pagination {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+.slider-bottom {
+    margin: 0;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+}
 
 /* ------------------------- акция ------------------------------------------- */
 .sale-title {
@@ -96,47 +212,108 @@ body {
     line-height: 46px;
     font-weight: 900;
     text-align: center;
+    width: 434px;
+    margin: 0 auto;
+}
+.sale-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 .sale-item-title {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
+    margin: 0;
+}
+.sale-item-description {
+    margin: 0;
 }
 
 .sale-item {
+    display: flex;
     background-color: #FF7799;
+    border-radius: 16px;
+    width: 570px;
+}
+.sale-item-text {
+    margin: 36px;
+    margin-right: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
 }
 
 /* ------------------------- популярные вкусы ----------------------------------- */
+.popular-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.product-card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 107px;
+    padding: 0;
+    list-style-type: none;
+}
 .product-card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #FCFCFC;
     border-radius: 8px;
+    width: 270px;
+    height: 281px;
+    margin: 0;
+    padding: 0;
 }
 .popular-title {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
     text-align: center;
+    margin: 0 auto;
+    width: 527px;
 }
 .product-card-title {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
     color: #2D3440;
+    margin: 0;
+    margin-top: 16px;
+    width: 190px;
 }
 .product-card-description {
     color: #565C66;
+    margin: 0;
+    margin-top: 8px;
+    width: 190px;
 }
 .product-card-item a {
     text-decoration: none;
+    text-align: center;
 }
 .product-card-price {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
+    margin: 0;
 }
 .product-card-image {
     border-radius: 50%;
+    margin-top: -51px;
+}
+.product-card-bottom {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
 }
 
 /* ------------------------- о магазине Глейси -------------------------------- */
@@ -149,24 +326,37 @@ body {
 }
 .about-wrapper {
     background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 56px 40px;
 }
 .about-title {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
     text-align: center;
+    margin: 0;
 }
 .adventages-item-description {
     color: #565C66;
+    margin: 0;
 }
-
+/* ----------------- общий контейнер для блога и рассылки----------------------- */
+.blog-newsletter-container {
+    display: flex;
+    justify-content: space-between;
+}
 /* ---------------------------------- блог ------------------------------------- */
 .blog-container {
     background-image: url(../images/backgrounds/blog.jpg);
     background-repeat: no-repeat;
     background-color: #FFFFFF;
-    background-size: 570px auto;
     border-radius: 16px;
+    width: 570px;
+    background-size: cover;
+    background-position: 50px -50px;
+    padding-left: 32px;
+    padding-top: 32px;
+    box-sizing: border-box;
 }
 .blog-container-title {
     line-height: 20px;
@@ -178,6 +368,7 @@ body {
     font-weight: 700;
     color: #2D3440;
     text-align: left;
+    width: 303px;
 }
 .blog-container a {
     text-decoration: none;
@@ -186,63 +377,109 @@ body {
 /* ---------------------------------- рассылка ---------------------------------- */
 .newsletter-container {
     background-image: url(../images/backgrounds/newsletter.png);
-    background-repeat: no-repeat;
-    background-size: 570px auto;
     background-color: #FFFFFF;
     border-radius: 16px;
-    display: flex;
     padding: 6px;
+    width: 570px;
+    display: flex;
+    margin: 0;
+    box-sizing: border-box;
 }
 .newsletter-form {
     background-color: #FFFFFF;
     border-radius: 16px;
+    margin: 0;
+    padding: 26px;
+}
+.newsletter-form input {
+    width: 332px;
+    height: 48px;
+    margin: 0;
 }
 .red-button {
     line-height: 20px;
     font-weight: 700;
     text-align: center;
+    padding: 12px 32px;
     color: #FCFCFC;
     background-color: #FF2F64;
-    border: 4px solid rgba(255, 47, 100, 0.3);
+    outline: 4px solid rgba(255, 47, 100, 0.3);
+    border: none;
     border-radius: 26px;
 }
 .newsletter-description {
     color: #565C66;
+    margin: 0;
+    width: 506px;
 }
 
 /* ---------------------------------- доставка ---------------------------------- */
 .delivery-container {
     background-image: url(../images/backgrounds/delivery.jpg);
-    background-repeat: no-repeat;
-    background-size: 1170px auto;
+    background-position-y: -300px;
     background-color: #EEEEEE;
     border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 64px;
+    padding-left: 100px;
+    box-sizing: border-box;
 }
 .delivery-title {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
+    margin: 0;
 }
 .delivery-description,
 .delivery-form-description {
     color: #565C66;
+    margin: 0;
 }
 .delivery-form label {
     line-height: 20px;
     font-weight: 700;
 }
-
+.delivery-form-description {
+    width: 380px;
+}
+.delivery-text-wrapper {
+    width: 371px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.delivery-form {
+    width: 500px;
+    background-color: #FCFCFC;
+    border-radius: 8px;
+    padding: 40px;
+}
 /* ---------------------------------- контакты ---------------------------------- */
 .contacts {
     background-image: url(../images/backgrounds/contact.jpg);
-    background-repeat: no-repeat;
-    background-size: 1170px auto;
     background-color: #EEEEEE;
     border-radius: 16px;
+    background-position-y: -100px;
+    padding: 64px;
+}
+.contacts-wrapper {
+    width: 343px;
+    padding: 40px;
+    background-color: #FCFCFC;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.contacts-address-title {
+    width: 179px;
+}
+.contacts-address-text {
+    width: 263px;
 }
 .contacts-address-title,
 .contacts-phone-title {
     color: #565C66;
+    margin: 0;
 }
 .contacts-address-text,
 .contacts-phone-number {
@@ -251,14 +488,26 @@ body {
     font-weight: 700;
     text-decoration: none;
     color: #2D3440;
+    margin: 0;
 }
 .working-time {
+    display: block;
     font-size: 14px;
     line-height: 20px;
     color: #565C66;
+    margin: 0;
 }
-
-/* ---------------------------------- подвал ---------------------------------- */
+.contacts button {
+    align-self: center;
+}
+/* ---------------------------------- ПОДВАЛ ---------------------------------- */
+.page-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1170px;
+}
 .footer-documents-title {
     font-size: 14px;
     line-height: 20px;
