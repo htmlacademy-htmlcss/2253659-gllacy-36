@@ -89,8 +89,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 1170px;
-    height: 104px;
-    margin: 0 auto;
+    margin: 24px auto;
 }
 .navigation-list,
 .navigation-left,
@@ -101,7 +100,7 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 32px;
-    list-style-type: none;
+    list-style: none;
 }
 .navigation-right,
 .navigation-user {
@@ -162,6 +161,8 @@ body {
 
 .background-slider-list {
     gap: 41px;
+    list-style: none;
+    opacity: 40%;
 }
 
 .slider-button {
@@ -192,7 +193,7 @@ body {
     margin: 0;
     padding: 0;
     gap: 16px;
-    list-style-type: none;
+    list-style: none;
 }
 .slider-pagination {
     margin: 0;
@@ -260,7 +261,7 @@ body {
     margin: 0;
     margin-top: 107px;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 .product-card-item {
     display: flex;
@@ -584,7 +585,7 @@ body {
 .catalog-filter {
 }
 .pagination {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     gap: 13px;
     margin: 0;
