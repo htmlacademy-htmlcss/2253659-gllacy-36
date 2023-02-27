@@ -72,6 +72,8 @@ body {
 /* ------------------------- ссылки в навигации ------------------------------- */
 .navigation-link,
 .contact-phone {
+    display: block;
+    padding: 24px 0;
     font-family: Inter, sans-serif;
     line-height: 20px;
     text-decoration: none;
@@ -81,6 +83,10 @@ body {
 .navigation-user {
     font-size: 14px;
 }
+.navigation-user .navigation-link {
+    min-width: 13px;
+    min-height: 13px;
+}
 
 /* -------------------------------- хедер ------------------------------------- */
 .header-container {
@@ -89,23 +95,29 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 1170px;
-    margin: 24px auto;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+.navigation-left {
+    width: 750px;
 }
 .navigation-list,
 .navigation-left,
 .navigation-right {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     gap: 32px;
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 .navigation-right,
 .navigation-user {
     gap: 16px;
 }
+
 
 /* ------------------------- основной блок ------------------------------------ */
 .page-container {
@@ -150,18 +162,23 @@ body {
     border-radius: 26px;
     text-decoration: none;
     border: none;
+    box-sizing: border-box;
+}
+.order-button {
+    display: inline-block;
 }
 .slider-container {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 21px;
 }
 
 .background-slider-list {
     gap: 41px;
-    list-style: none;
+    list-style-type: none;
     opacity: 40%;
 }
 
@@ -169,19 +186,34 @@ body {
     width: 38px;
     height: 38px;
 }
+.button-next {
+    margin-left: -19px;
+}
+.button-prev {
+    margin-right: -19px;
+}
 .slider-text-wrapper {
     padding-left: 70px;
+    margin-right: -15px;
     width: 470px;
 }
 .slider-images-wrapper {
-    margin: 0;
     display: flex;
+    margin: 0;
 }
 .slider-selected {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+}
+.slider-selected::before {
+    background-color: #FCFCFC;
+    border-radius: 50%;
+}
+.slider-selected::after {
+    background-color: #FCFCFC;
+    border-radius: 0%;
 }
 .background-slider-list {
     display: flex;
@@ -190,17 +222,33 @@ body {
 }
 .social {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     gap: 16px;
-    list-style: none;
+    list-style-type: none;
+}
+.social-item {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
 }
 .slider-pagination {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
     display: flex;
     gap: 8px;
+}
+.slider-pagination-button {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: rgba(252, 252, 252, 0.4);
+    border-radius: 50%;
+}
+.slider-pagination-current {
+    background-color: #FCFCFC;
 }
 .slider-bottom {
     margin: 0;
@@ -217,6 +265,7 @@ body {
     text-align: center;
     width: 434px;
     margin: 0 auto;
+    margin-bottom: 55px;
 }
 .sale-wrapper {
     display: flex;
@@ -259,9 +308,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
-    margin-top: 107px;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
 }
 .product-card-item {
     display: flex;
@@ -271,9 +319,8 @@ body {
     background-color: #FCFCFC;
     border-radius: 8px;
     width: 270px;
-    height: 281px;
     margin: 0;
-    padding: 0;
+    padding-bottom: 24px;
 }
 .popular-title {
     font-size: 32px;
@@ -281,6 +328,7 @@ body {
     font-weight: 900;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 107px;
     width: 527px;
 }
 .product-card-title {
@@ -309,6 +357,9 @@ body {
     margin: 0;
 }
 .product-card-image {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
     border-radius: 50%;
     margin-top: -51px;
 }
@@ -317,6 +368,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
+}
+.product-card-button {
+    width: 32px;
+    height: 32px;
 }
 
 /* ------------------------- о магазине Глейси -------------------------------- */
@@ -338,10 +393,23 @@ body {
     font-weight: 900;
     text-align: center;
     margin: 0;
+    margin-bottom: 56px;
 }
-.adventages-item-description {
+.advantages-item-description {
     color: #565C66;
     margin: 0;
+}
+.advantages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    row-gap: 40px;
+    column-gap: 33px;
+    list-style-type: none;
+}
+.advantages-item-icon {
+    min-width: 48px;
+    min-height: 48px;
 }
 /* ----------------- общий контейнер для блога и рассылки----------------------- */
 .blog-newsletter-container {
@@ -356,9 +424,10 @@ body {
     border-radius: 16px;
     width: 570px;
     background-size: cover;
-    background-position: 50px -50px;
+    background-position: 60px -80px;
     padding-left: 32px;
     padding-top: 32px;
+    padding-bottom: 67px;
     box-sizing: border-box;
 }
 .blog-container-title {
@@ -372,6 +441,9 @@ body {
     color: #2D3440;
     text-align: left;
     width: 303px;
+    margin: 0;
+    padding: 0;
+    margin-top: 13px;
 }
 .blog-container a {
     text-decoration: none;
@@ -389,6 +461,9 @@ body {
     box-sizing: border-box;
 }
 .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #FFFFFF;
     border-radius: 16px;
     margin: 0;
@@ -398,6 +473,10 @@ body {
     width: 332px;
     height: 48px;
     margin: 0;
+    padding-left: 16px;
+    border: 1px solid #B9B9B9;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 .red-button {
     line-height: 20px;
@@ -409,17 +488,22 @@ body {
     outline: 4px solid rgba(255, 47, 100, 0.3);
     border: none;
     border-radius: 26px;
+    box-sizing: border-box;
 }
 .newsletter-description {
     color: #565C66;
     margin: 0;
     width: 506px;
 }
+.newsletter-form-input {
+    display: flex;
+    gap: 18px;
+}
 
 /* ---------------------------------- доставка ---------------------------------- */
 .delivery-container {
     background-image: url(../images/backgrounds/delivery.jpg);
-    background-position-y: -300px;
+    background-position-y: -120px;
     background-color: #EEEEEE;
     border-radius: 16px;
     display: flex;
@@ -440,24 +524,60 @@ body {
     margin: 0;
 }
 .delivery-form label {
+    display: flex;
+    flex-direction: column;
     line-height: 20px;
     font-weight: 700;
+    gap: 8px;
+}
+.delivery-form input {
+    height: 48px;
+    margin: 0;
+    padding-left: 16px;
+    border: 1px solid #B9B9B9;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 .delivery-form-description {
     width: 380px;
+    margin-bottom: 32px;
 }
 .delivery-text-wrapper {
     width: 371px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    align-self: center;
 }
 .delivery-form {
     width: 500px;
     background-color: #FCFCFC;
     border-radius: 8px;
     padding: 40px;
+    padding-bottom: 42px;
+    box-sizing: border-box;
 }
+.delivery-form button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+.date-phone {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.delivery-date {
+    width: 117px;
+}
+.delivery-phone {
+    width: 287px;
+}
+.delivery-address {
+    width: 420px;
+}
+
+
 /* ---------------------------------- контакты ---------------------------------- */
 .contacts {
     background-image: url(../images/backgrounds/contact.jpg);
@@ -469,20 +589,18 @@ body {
 .contacts-wrapper {
     width: 343px;
     padding: 40px;
+    padding-bottom: 42px;
     background-color: #FCFCFC;
     border-radius: 8px;
     box-sizing: border-box;
 }
-.contacts-address-title {
-    width: 179px;
-}
-.contacts-address-text {
-    width: 263px;
-}
+
+
 .contacts-address-title,
 .contacts-phone-title {
     color: #565C66;
     margin: 0;
+    margin-bottom: 12px;
 }
 .contacts-address-text,
 .contacts-phone-number {
@@ -499,6 +617,15 @@ body {
     line-height: 20px;
     color: #565C66;
     margin: 0;
+    margin-bottom: 32px;
+}
+
+.contacts-address-title {
+    width: 179px;
+}
+.contacts-address-text {
+    width: 263px;
+    margin-bottom: 24px;
 }
 .contacts button {
     align-self: center;
@@ -508,14 +635,23 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    padding: 48px 0;
     margin: 0 auto;
     width: 1170px;
 }
-.footer-documents-title {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
+
+.documents-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 8px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+
 .documents-list a {
     font-size: 14px;
     line-height: 20px;
@@ -523,14 +659,22 @@ body {
     color: #2D3440;
     text-decoration: none;
 }
+.documents-link-bold {
+    font-weight: 700;
+}
 .academy-site-text {
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
 }
 .academy-site-text a {
     color: #2D3440;
+    padding: 5px 0;
 }
+
 
 /* ------------------------------- СТРАНИЦА КАТАЛОГА ------------------------------- */
 
@@ -538,8 +682,9 @@ body {
 .breadcrumbs {
     display: flex;
     gap: 28px;
-    list-style: none;
+    list-style-type: none;
     margin: 0;
+    margin-top: 32px;
     padding: 0;
 }
 .breadcrumbs-link {
@@ -556,12 +701,17 @@ body {
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    padding: 0;
 }
 
 /* -------------------------------------------- форма ------------------------------- */
 .catalog-filter {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 95px;
 }
 .form-apply-button {
     background-color: rgba(252, 252, 252, 0.3);
@@ -582,18 +732,25 @@ body {
 }
 
 /* -------------------------------------------- пагинация ----------------------------- */
-.catalog-filter {
+.inner-page-container {
+    gap: 0;
 }
-.pagination {
-    list-style: none;
+.pagination-list {
     display: flex;
+    justify-content: flex-end;
     gap: 13px;
+    width: 200px;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.pagination-empty {
+    width: 200px;
 }
 .catalog-filter-list {
     display: flex;
     margin: 0;
-    list-style: none;
+    list-style-type: none;
     padding: 10px;
     background-color: rgba(252, 252, 252, 0.3);
     border-radius: 20px;
@@ -610,9 +767,7 @@ body {
     color: #2D3440;
     margin: 0;
 }
-.pagination-item {
-    margin: auto;
-}
+
 .pagination-current {
     display: inline-block;
     width: 24px;
@@ -620,13 +775,25 @@ body {
     background-color: #FCFCFC;
     border-radius: 50%;
     text-align: center;
-    vertical-align: middle;
 }
 .pagination-wrapper {
-    margin: 57px 0;
     display: flex;
     justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    padding: 41px 0;
 }
-.pagination-show-more {
-    margin-left:auto;
-}
+
+/* --------------скрываем невидимые элементы ------------- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }

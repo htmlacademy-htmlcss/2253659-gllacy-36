@@ -62,7 +62,7 @@
   </header>
 
     <main class="main-inner">
-      <div class="page-container">
+      <div class="page-container inner-page-container">
         <header class="inner-header">
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -347,8 +347,10 @@
             </li>
           </ul>
           <div class="pagination-wrapper">
+            <!-- пустой элемент для выравнивания justify-content: space-between -->
+            <div class="pagination-empty">fdsfdsf</div>
             <button class="white-button pagination-show-more" type="button">Показать еще</button>
-            <ul class="pagination">
+            <ul class="pagination-list">
               <li class="pagination-item">
                 <a class="pagination-link pagination-prev pagination-disabled">
                   <span class="visually-hidden">Предыдущая страница</span>
@@ -384,7 +386,7 @@
     <footer class="page-footer">
       <div class="page-footer-container">
         <section class="footer-social">
-          <h2 class="footer-social-title">Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <ul class="social">
             <li class="social-item">
               <a class="social-button" href="https://t.me/htmlacademy">
@@ -405,8 +407,10 @@
         </section>
 
         <section class="footer-documents">
-          <h2 class="footer-documents-title"><span class="footer-documents-icon"></span>Для поставщиков</h2>
           <ul class="documents-list">
+            <li class="documents-item">
+              <a href="#" class="documents-link-bold"><span class="footer-documents-icon"></span>Для поставщиков</a>
+            </li>
             <li class="documents-item">
               <a href="#" class="documents-link">О производстве</a>
             </li>

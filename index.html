@@ -245,33 +245,33 @@
 
             <ul class="advantages-list">
               <li class="advantages-item">
-                <span class="adventages-item-icon"></span>
+                <span class="advantages-item-icon"></span>
                 <h3 class="visually-hidden">Современное оборудование</h3>
-                <p class="adventages-item-description">
+                <p class="advantages-item-description">
                   Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
                 </p>
               </li>
 
               <li class="advantages-item">
-                <span class="adventages-item-icon"></span>
+                <span class="advantages-item-icon"></span>
                 <h3 class="visually-hidden">Проверенные фермерские хозяйства</h3>
-                <p class="adventages-item-description">
+                <p class="advantages-item-description">
                   Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
                 </p>
               </li>
 
               <li class="advantages-item">
-                <span class="adventages-item-icon"></span>
+                <span class="advantages-item-icon"></span>
                 <h3 class="visually-hidden">Натуральные ингредиенты</h3>
-                <p class="adventages-item-description">
+                <p class="advantages-item-description">
                   Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
                 </p>
               </li>
 
               <li class="advantages-item">
-                <span class="adventages-item-icon"></span>
+                <span class="advantages-item-icon"></span>
                 <h3 class="visually-hidden">Доставка в термопаке</h3>
-                <p class="adventages-item-description">
+                <p class="advantages-item-description">
                   Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
                 </p>
               </li>
@@ -296,8 +296,10 @@
               <p class="newsletter-description">
                 Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </p>
-              <input type="email" name="newsletter-email" placeholder="email@example.com">
-              <button class="red-button" type="submit">Отправить</button>
+              <div class="newsletter-form-input">
+                <input type="email" name="newsletter-email" placeholder="email@example.com">
+                <button class="red-button" type="submit">Отправить</button>
+              </div>
             </form>
           </section>
         </div>
@@ -312,15 +314,18 @@
           </div>
           <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
             <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-            <label for="delivery-date">Дата</label>
-            <input name="delivery-date" type="text" placeholder="01.04.2020" required id="delivery-date">
+            <div class="date-phone">
+              <label for="delivery-date">Дата
+                <input class="delivery-date" name="delivery-date" type="text" placeholder="01.04.2020" required id="delivery-date">
+              </label>
+              <label for="delivery-phone">Телефон
+                <input class="delivery-phone" name="delivery-phone" type="tel" placeholder="+7 800 999-00-00" id="delivery-phone">
+              </label>
+            </div>
 
-            <label for="delivery-phone">Телефон</label>
-            <input name="delivery-phone" type="tel" placeholder="+7 800 999-00-00" id="delivery-phone">
-
-            <label for="delivery-address">Адрес</label>
-            <input name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required id="delivery-address">
-
+            <label for="delivery-address">Адрес
+              <input class="delivery-address" name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required id="delivery-address">
+            </label>
             <button class="red-button delivery-send" type="submit">Отправить</button>
           </form>
         </section>
@@ -345,7 +350,7 @@
     <footer class="page-footer">
       <div class="page-footer-container">
         <section class="footer-social">
-          <h2 class="footer-social-title">Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <ul class="social">
             <li class="social-item">
               <a class="social-button" href="https://t.me/htmlacademy">
@@ -366,8 +371,10 @@
         </section>
 
         <section class="footer-documents">
-          <h2 class="footer-documents-title"><span class="footer-documents-icon"></span>Для поставщиков</h2>
           <ul class="documents-list">
+            <li class="documents-item">
+              <a href="#" class="documents-link-bold"><span class="footer-documents-icon"></span>Для поставщиков</a>
+            </li>
             <li class="documents-item">
               <a href="#" class="documents-link">О производстве</a>
             </li>
