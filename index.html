@@ -312,23 +312,28 @@
               Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
             </p>
           </div>
-          <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
+          <!-- ----- форма оформления доставки ----- -->
+          <div class="delivery-form-wrapper">
             <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-            <div class="date-phone">
+            <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
+
               <label for="delivery-date">Дата
                 <input class="delivery-date" name="delivery-date" type="text" placeholder="01.04.2020" required id="delivery-date">
               </label>
+
               <label for="delivery-phone">Телефон
                 <input class="delivery-phone" name="delivery-phone" type="tel" placeholder="+7 800 999-00-00" id="delivery-phone">
               </label>
-            </div>
 
-            <label for="delivery-address">Адрес
-              <input class="delivery-address" name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required id="delivery-address">
-            </label>
-            <button class="red-button delivery-send" type="submit">Отправить</button>
-          </form>
+              <label for="delivery-address" class="delivery-address">Адрес
+                <input name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required id="delivery-address">
+              </label>
+
+              <button class="red-button delivery-send" type="submit">Отправить</button>
+            </form>
+          </div>
         </section>
+
         <!-- контакты -->
         <section class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
@@ -375,12 +380,15 @@
             <li class="documents-item">
               <a href="#" class="documents-link-bold"><span class="footer-documents-icon"></span>Для поставщиков</a>
             </li>
-            <li class="documents-item">
-              <a href="#" class="documents-link">О производстве</a>
-            </li>
+
             <li class="documents-item">
               <a href="#" class="documents-link">Наши документы</a>
             </li>
+
+            <li class="documents-item">
+              <a href="#" class="documents-link">О производстве</a>
+            </li>
+
             <li class="documents-item">
               <a href="#" class="documents-link">Экологические стандарты</a>
             </li>

@@ -98,8 +98,8 @@ body {
     margin: 0 auto;
     padding: 18px 0;
 }
-.navigation-left {
-    width: 750px;
+.navigation-left .navigation-list {
+    width: 550px;
 }
 .navigation-list,
 .navigation-left,
@@ -108,16 +108,23 @@ body {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 0 32px;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 .navigation-right,
 .navigation-user {
-    gap: 16px;
+    gap: 0 16px;
 }
-
+.navigation-user a {
+    padding: 6px 16px;
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 30px;
+}
+.navigation-list a:first-child {
+    padding: 10px;
+}
 
 /* ------------------------- основной блок ------------------------------------ */
 .page-container {
@@ -146,7 +153,6 @@ body {
     width: 429px;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
     margin: 0;
     margin-top: 24px;
     margin-bottom: 48px;
@@ -420,11 +426,11 @@ body {
 .blog-container {
     background-image: url(../images/backgrounds/blog.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60px -80px;
     background-color: #FFFFFF;
     border-radius: 16px;
     width: 570px;
-    background-size: cover;
-    background-position: 60px -80px;
     padding-left: 32px;
     padding-top: 32px;
     padding-bottom: 67px;
@@ -452,6 +458,7 @@ body {
 /* ---------------------------------- рассылка ---------------------------------- */
 .newsletter-container {
     background-image: url(../images/backgrounds/newsletter.png);
+    background-size: cover;
     background-color: #FFFFFF;
     border-radius: 16px;
     padding: 6px;
@@ -549,7 +556,7 @@ body {
     gap: 24px;
     align-self: center;
 }
-.delivery-form {
+.delivery-form-wrapper {
     width: 500px;
     background-color: #FCFCFC;
     border-radius: 8px;
@@ -557,25 +564,23 @@ body {
     padding-bottom: 42px;
     box-sizing: border-box;
 }
-.delivery-form button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 32px;
-}
-.date-phone {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-}
-.delivery-date {
-    width: 117px;
-}
-.delivery-phone {
-    width: 287px;
+.delivery-form {
+    width: 420px;
+    display: grid;
+    grid-template-columns: 117px 287px;
+    row-gap: 20px;
+    column-gap: 16px;
+    margin: 0;
 }
 .delivery-address {
-    width: 420px;
+    grid-column: 1/-1;
 }
+.delivery-form button {
+    grid-column: 1/-1;
+    justify-self: center;
+    margin-top: 12px;
+}
+
 
 
 /* ---------------------------------- контакты ---------------------------------- */
@@ -583,7 +588,7 @@ body {
     background-image: url(../images/backgrounds/contact.jpg);
     background-color: #EEEEEE;
     border-radius: 16px;
-    background-position-y: -100px;
+    background-size: cover;
     padding: 64px;
 }
 .contacts-wrapper {
@@ -643,7 +648,7 @@ body {
 
 .documents-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content;
     column-gap: 24px;
     row-gap: 8px;
     list-style-type: none;
@@ -655,7 +660,6 @@ body {
 .documents-list a {
     font-size: 14px;
     line-height: 20px;
-    font-weight: 400;
     color: #2D3440;
     text-decoration: none;
 }
@@ -665,7 +669,6 @@ body {
 .academy-site-text {
     font-size: 12px;
     line-height: 16px;
-    font-weight: 400;
     padding: 0;
     margin: 0;
     margin-top: 14px;
@@ -677,6 +680,9 @@ body {
 
 
 /* ------------------------------- СТРАНИЦА КАТАЛОГА ------------------------------- */
+.inner-page-container {
+    gap: 0;
+}
 
 /* ---------------------------------- шапка каталога ------------------------------- */
 .breadcrumbs {
@@ -725,16 +731,11 @@ body {
 }
 .catalog-products .product-card-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 30px;
-    row-gap: 91px;
-    padding: 0;
+    grid-template-columns: repeat(4, 270px);
+    gap: 91px 30px;
 }
-
 /* -------------------------------------------- пагинация ----------------------------- */
-.inner-page-container {
-    gap: 0;
-}
+
 .pagination-list {
     display: flex;
     justify-content: flex-end;
