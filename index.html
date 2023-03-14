@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Магазин GllacyShop</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body>
@@ -16,10 +17,27 @@
           <!-- Навигация по сайту -->
         <nav class="navigation">
           <ul class="navigation-list navigation-menu">
-            <li class="navigation-item">
+            <li class="navigation-item catalog-item">
               <a class="navigation-link navigation-level" href="catalog.html">Каталог
                 <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="7" fill="none"><path fill-rule="evenodd" d="M1.808 1.053a.667.667 0 0 0-.943.943l4.66 4.66a.665.665 0 0 0 .955 0l4.661-4.66a.667.667 0 0 0-.942-.943L6.003 5.248 1.808 1.053Z" clip-rule="evenodd"/></svg>
               </a>
+              <ul class="subcatalog">
+                <li class="subcatalog-item">
+                  <b>Новинки</b>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Сливочное</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Щербеты</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="subcatalog-item">
+                  <a class="subcatalog-link" href="#">Мелорин</a>
+                </li>
+              </ul>
             </li>
 
             <li class="navigation-item">
@@ -72,14 +90,37 @@
           <!-- Информация о выбранном товаре\\ будет меняться в стилизации -->
           <h2 class="visually-hidden">Промо-товары</h2>
           <div class="slider-container">
+            <!-- --------------------------------- с клубничным джемом ------------------------------------------ -->
             <div class="slider-text-wrapper">
               <h3 class="promo-title">
-                  Нежный пломбир<br>с клубничным джемом
+                Нежный пломбир<br>с клубничным джемом
               </h3>
               <p class="promo-description">
                   Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.
               </p>
-              <a class="order-button product-button button" href="#">Заказать</a>
+              <a class="order-button main-button button" href="#">Заказать</a>
+            </div>
+
+            <!-- --------------------------------- со вкусом банана ------------------------------------------ -->
+            <div class="slider-text-wrapper current">
+              <h3 class="promo-title">
+                Сливочное мороженое<br>со вкусом банана
+              </h3>
+              <p class="promo-description">
+                Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.
+              </p>
+              <a class="order-button main-button button" href="#">Заказать</a>
+            </div>
+
+            <!-- --------------------------------- с маршмеллоу ------------------------------------------ -->
+            <div class="slider-text-wrapper">
+              <h3 class="promo-title">
+                Карамельный пломбир<br>с маршмеллоу
+              </h3>
+              <p class="promo-description">
+                Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.
+              </p>
+              <a class="order-button main-button button" href="#">Заказать</a>
             </div>
             <!-- правая часть блока с картинками -->
             <div class="slider-images-wrapper">
@@ -91,7 +132,7 @@
                     </svg>
 
                 </button>
-                <div class="slider-image-wrapper"><img class="slider-image" src="images/promo/promo-1.png" width="327" height="507" alt="Пломбир с клубничным джемом"></div>
+                <div class="slider-image-wrapper"><img class="slider-image" src="images/promo/promo-3.png" width="327" height="507" alt="Пломбир с клубничным джемом"></div>
                 <button class="slider-button button-next button" type="button">
                   <span class="visually-hidden">Следующее мороженое</span>
                   <svg class="slider-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,10 +145,10 @@
               <!-- Список фоновых изображений мороженого из слайдера -->
               <ol class="background-slider-list">
                 <li class="background-slider-item">
-                  <img class="background-slider-image slider-image" src="images/promo/promo-3.png" width="100" height="150" alt="Сливочное мороженое со вкусом банана">
+                  <img class="background-slider-image slider-image" src="images/promo/promo-2.png" width="100" height="150" alt="Сливочное мороженое со вкусом банана">
                 </li>
                 <li class="background-slider-item">
-                  <img class="background-slider-image slider-image" src="images/promo/promo-2.png" width="100" height="150" alt="Карамельный пломбир с маршмеллоу">
+                  <img class="background-slider-image slider-image" src="images/promo/promo-1.png" width="100" height="150" alt="Карамельный пломбир с маршмеллоу">
                 </li>
               </ol>
             </div>
@@ -118,12 +159,12 @@
             <!-- Пагинация -->
             <ol class="slider-pagination">
               <li class="slider-pagination-item">
-                <button class="slider-pagination-button current  button" type="button">
+                <button class="slider-pagination-button button" type="button">
                   <span class="visually-hidden">Мороженое 1</span>
                 </button>
               </li>
               <li class="slider-pagination-item">
-                <button class="slider-pagination-button button" type="button">
+                <button class="slider-pagination-button current button" type="button">
                   <span class="visually-hidden">Мороженое 2</span>
                 </button>
               </li>
@@ -169,7 +210,7 @@
                 <p class="sale-item-description">
                   При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
                 </p>
-                <a class="sale-item-button product-button button" href="#">Хочу подарок</a>
+                <a class="sale-item-button main-button button" href="#">Хочу подарок</a>
               </div>
               <img src="images/sale/raspberries.png" width="219" height="268" alt="Малина в рожке" class="sale-item-image">
             </div>
@@ -179,7 +220,7 @@
                 <p class="sale-item-description">
                   При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
                 </p>
-                <a class="sale-item-button product-button button" href="#">Хочу подарок</a>
+                <a class="sale-item-button main-button button" href="#">Хочу подарок</a>
               </div>
               <img src="images/sale/marshmallow.png" width="219" height="268" alt="Маршмеллоу в рожке" class="sale-item-image">
             </div>
@@ -322,7 +363,11 @@
                 Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </p>
               <div class="newsletter-form-input">
-                <input type="email" name="newsletter-email" placeholder="email@example.com">
+                <p class="field-group">
+                  <label for="newsletter-field" class="visually-hidden">E-mail</label>
+                  <input class="field" id="newsletter-field" type="email" name="newsletter-email" placeholder="email@example.com">
+                </p>
+
                 <button class="form-button button" type="submit">Отправить</button>
               </div>
             </form>
@@ -342,19 +387,34 @@
             <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
             <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
 
-              <label for="delivery-date">Дата
-                <input class="delivery-date" name="delivery-date" type="text" placeholder="01.04.2020" required id="delivery-date">
-              </label>
+              <p class="field-group">
+                <span class="form-label">
+                  <label for="delivery-date">Дата</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите дату доставки</span>
+                  </span>
+                </span>
+                <input class="field" class="delivery-date" name="delivery-date" type="text" placeholder="01.04.2020" required id="delivery-date">
+              </p>
 
-              <label for="delivery-phone">Телефон
-                <input class="delivery-phone" name="delivery-phone" type="tel" placeholder="+7 800 999-00-00" id="delivery-phone">
-              </label>
+              <p class="field-group">
+                <label for="delivery-phone">Телефон</label>
+                <input class="field" class="delivery-phone" name="delivery-phone" type="tel" placeholder="+7 800 999-00-00" id="delivery-phone">
+              </p>
 
-              <label for="delivery-address" class="delivery-address">Адрес
-                <input name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required id="delivery-address">
-              </label>
+              <p class="field-group delivery-address">
+                <span class="form-label">
+                  <label for="delivery-address">Адрес</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-address">Введите название улицы, дома и квартиры</span>
+                  </span>
+                </span>
+                <input class="field" name="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required id="delivery-address">
+              </p>
 
-              <button class="form-button delivery-send button" type="submit">Отправить</button>
+              <button class="form-button button" type="submit">Отправить</button>
             </form>
           </div>
         </section>
@@ -430,5 +490,35 @@
         </section>
       </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal-container modal-container-close">
+      <div class="modal">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h3 class="visually-hidden">Форма обратной связи</h3>
+          <p class="modal-title">Мы обязательно ответим вам!</p>
+          <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
+            <p class="field-group">
+              <label for="modal-name" class="visually-hidden">Имя и фамилия</label>
+              <input type="text" class="field" id="modal-name" name="name" placeholder="Имя и фамилия">
+            </p>
+            <p class="field-group">
+              <label for="modal-email" class="visually-hidden">E-mail</label>
+              <input type="email" class="field" id="modal-email" name="email" placeholder="email@example.com">
+            </p>
+            <p class="field-group">
+              <label for="modal-message" class="visually-hidden">Сообщение</label>
+              <textarea type="textarea" class="field" id="modal-message" name="message" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="form-button button" type="submit">Отправить</button>
+          </form>
+
+        </section>
+      </div>
+    </div>
   </body>
 </html>
