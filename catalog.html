@@ -53,26 +53,99 @@
             <!-- Пользовательская информация -->
         <nav class="navigation">
           <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
+            <!-- Поиск -->
+            <li class="navigation-item search">
               <a class="navigation-link navigation-search" href="#">
-                <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M1.663 6.188a4.667 4.667 0 1 1 8.028 3.237.674.674 0 0 0-.124.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z" clip-rule="evenodd"/></svg>
+                <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path fill-rule="evenodd" d="M1.663 6.188a4.667 4.667 0 1 1 8.028 3.237.674.674 0 0 0-.124.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z" clip-rule="evenodd"/></svg>
                 <span class="visually-hidden">Поиск</span>
               </a>
+              <div class="search-container">
+                <form action="https://echo.htmlacademy.ru/" method="get" class="search-form">
+                  <p class="field-group">
+                    <label for="search-field" class="visually-hidden">Поиск по сайту</label>
+                    <input type="text" class="field" id="search-field" name="search" placeholder="Поиск по сайту">
+                  </p>
+                </form>
+              </div>
             </li>
-
-            <li class="navigation-item">
+            <!-- Авторизация -->
+            <li class="navigation-item auth">
               <a class="navigation-link navigation-link-login" href="#">
                 <svg  class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M8 1.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H8.667a.667.667 0 0 1 0-1.333h2.666A.667.667 0 0 0 12 12.19V2.858a.666.666 0 0 0-.667-.667H8.667A.667.667 0 0 1 8 1.525ZM4.862 3.72c.26-.26.682-.26.943 0l3.329 3.329a.673.673 0 0 1 .2.476.664.664 0 0 1-.2.476l-3.33 3.328a.667.667 0 1 1-.942-.943l2.195-2.195H.667a.667.667 0 1 1 0-1.333h6.39L4.862 4.663a.667.667 0 0 1 0-.943Z" clip-rule="evenodd"/></svg>
                 <span class="navigation-login">Вход</span>
               </a>
+              <div class="auth-container">
+                <section class="auth-content">
+                  <h2 class="auth-title">Личный кабинет</h2>
+                  <form action="https://echo.htmlacademy.ru/" method="post" class="auth-form">
+                    <p class="field-group email">
+                      <label for="auth-email-field" class="visually-hidden">E-mail</label>
+                      <input type="email" class="field" id="auth-email-field" name="e-mail" placeholder="email@example.com">
+                    </p>
+                    <p class="field-group password">
+                      <label for="auth-password-field" class="visually-hidden">Пароль</label>
+                      <input type="password" class="field" id="auth-password-field" name="password" placeholder="Пароль">
+                    </p>
+                    <div class="auth-bottom-wrapper">
+                      <button class="form-button button" type="submit">Войти</button>
+                      <p class="auth-link">
+                        <a href="#" class="forgot-pass">Забыли пароль?</a><br>
+                        <a href="#" class="registration">Регистрация</a>
+                      </p>
+                    </div>
+                  </form>
+                </section>
+              </div>
             </li>
-
-            <li class="navigation-item">
+            <!-- Корзина -->
+            <li class="navigation-item cart">
               <a class="navigation-link navigation-link-cart" href="#">
-                <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none"><path fill="#2D3440" fill-rule="evenodd" d="M1.1667.108a.6667.6667 0 1 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.053l.9674 4.8334.0001.0006a1.8256 1.8256 0 0 0 1.8183 1.4691h5.6207a1.8258 1.8258 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7916H4.6107L4.1381.6438a.6667.6667 0 0 0-.6537-.5359H1.1667ZM5.691 8.4023l-.8134-4.064h8.2308l-.7756 4.0669a.4923.4923 0 0 1-.4918.3943v-.0002H6.1962l-.0128.0002a.4922.4922 0 0 1-.4922-.3963l-.0002-.001Zm-1.1336 3.961c0-.688.5577-1.2457 1.2457-1.2457.688 0 1.2457.5577 1.2457 1.2457 0 .6879-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5578-1.2457-1.2457Zm6.3733 0c0-.688.5577-1.2457 1.2457-1.2457.688 0 1.2457.5577 1.2457 1.2457 0 .6879-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5578-1.2457-1.2457Z" clip-rule="evenodd"/></svg>
+                <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none"><path fill-rule="evenodd" d="M1.1667.108a.6667.6667 0 1 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.053l.9674 4.8334.0001.0006a1.8256 1.8256 0 0 0 1.8183 1.4691h5.6207a1.8258 1.8258 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7916H4.6107L4.1381.6438a.6667.6667 0 0 0-.6537-.5359H1.1667ZM5.691 8.4023l-.8134-4.064h8.2308l-.7756 4.0669a.4923.4923 0 0 1-.4918.3943v-.0002H6.1962l-.0128.0002a.4922.4922 0 0 1-.4922-.3963l-.0002-.001Zm-1.1336 3.961c0-.688.5577-1.2457 1.2457-1.2457.688 0 1.2457.5577 1.2457 1.2457 0 .6879-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5578-1.2457-1.2457Zm6.3733 0c0-.688.5577-1.2457 1.2457-1.2457.688 0 1.2457.5577 1.2457 1.2457 0 .6879-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5578-1.2457-1.2457Z" clip-rule="evenodd"/></svg>
                 <span class="visually-hidden">Корзина</span>
                 2 товара
               </a>
+              <div class="cart-container">
+                <section class="cart-content">
+                  <h2 class="cart-title">Корзина</h2>
+                  <ul class="cart-products-list">
+                    <li class="cart-item">
+                      <div class="cart-left-wrapper">
+                        <img src="images/catalog/product-1.jpg" alt="Мороженое со вкусом малины" width="46" height="46" class="cart-image">
+                        <div class="product-info">
+                          <span class="product-name">Малинка</span>
+                          <p class="price-description">1 кг х 310 ₽</p>
+                        </div>
+                      </div>
+                      <div class="cart-right-wrapper">
+                        <p class="price">310 ₽</p>
+                        <button class="product-delete-button"></button>
+                      </div>
+                    </li>
+
+                    <li class="cart-item">
+                      <div class="cart-left-wrapper">
+                        <img src="images/catalog/product-4.jpg" alt="Мороженое со вкусом бабл-гам" width="46" height="46" class="cart-image">
+                        <div class="product-info">
+                          <span class="product-name">Бабл-гам</span>
+                          <p class="price-description">1,5 кг х 320 ₽</p>
+                        </div>
+                      </div>
+                      <div class="cart-right-wrapper">
+                        <p class="price">480 ₽</p>
+                        <button class="product-delete-button"></button>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="cart-bottom-wrapper">
+                    <a href="#" class="form-button">Оформить заказ</a>
+                    <p class="total-price">Итого: 790 ₽</p>
+                  </div>
+                </section>
+              </div>
+              <div class="cart-empty-container">
+                <p class="empty-text">Ваша корзина пока пуста</p>
+              </div>
             </li>
           </ul>
         </nav>
@@ -230,7 +303,7 @@
 
 
           <ul class="product-card-list">
-  <!-- ------------------------------------Товар 1----------------------------------- -->
+  <!--Товар 1 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-1.jpg" width="168" height="168" alt="Мороженое с малиной" class="product-card-image">
@@ -247,7 +320,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 2----------------------------------- -->
+  <!--Товар 2 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-2.jpg" width="168" height="168" alt="Фисташковое мороженое" class="product-card-image">
@@ -264,7 +337,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 3----------------------------------- -->
+  <!-- Товар 3 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-3.jpg" width="168" height="168" alt="Мороженое с черникой" class="product-card-image">
@@ -281,7 +354,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 4 ----------------------------------- -->
+  <!-- Товар 4 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-4.jpg" width="168" height="168" alt="Мороженое со вкусом бабл-гам" class="product-card-image">
@@ -298,7 +371,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 5 ----------------------------------- -->
+  <!-- Товар 5 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-5.jpg" width="168" height="168" alt="Мороженое со вкусом ежевики" class="product-card-image">
@@ -315,7 +388,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 6 ----------------------------------- -->
+  <!--Товар 6 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-6.jpg" width="168" height="168" alt="Мороженое со вкусом банана" class="product-card-image">
@@ -332,7 +405,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 7 ----------------------------------- -->
+  <!-- Товар 7 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-7.jpg" width="168" height="168" alt="Шоколадное мороженое" class="product-card-image">
@@ -349,7 +422,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 8 ----------------------------------- -->
+  <!-- Товар 8 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-8.jpg" width="168" height="168" alt="Клубничное мороженое" class="product-card-image">
@@ -366,7 +439,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 9 ----------------------------------- -->
+  <!--Товар 9 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-9.jpg" width="168" height="168" alt="Мороженое со вкусом лимона" class="product-card-image">
@@ -383,7 +456,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 10----------------------------------- -->
+  <!--Товар 10 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-10.jpg" width="168" height="168" alt="Мороженое с ментолом" class="product-card-image">
@@ -400,7 +473,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 11----------------------------------- -->
+  <!--Товар 11 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-11.jpg" width="168" height="168" alt="Фисташковый пломбир с шоколадным сиропом" class="product-card-image">
@@ -417,7 +490,7 @@
                 </button>
               </div>
             </li>
-  <!-- ------------------------------------Товар 12----------------------------------- -->
+  <!--Товар 12 -->
             <li class="product-card-item">
               <a href="#" class="product-card-link">
                 <img src="images/catalog/product-12.jpg" width="168" height="168" alt="Мороженое крем-брюле" class="product-card-image">
@@ -502,7 +575,7 @@
         <section class="footer-documents">
           <ul class="documents-list">
             <li class="documents-item">
-              <a href="#" class="documents-link-bold"><span class="footer-documents-icon"></span>Для поставщиков</a>
+              <h2 class="footer-documents-title">Для поставщиков</h2>
             </li>
 
             <li class="documents-item">
