@@ -60,7 +60,7 @@ body {
     font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 22px;
-    background-color: #69A9FF;
+    background-color: #FEAFC3;
     color: #2D3440;
 }
 
@@ -208,9 +208,7 @@ body {
     border: none;
     box-sizing: border-box;
 }
-.order-button {
-    display: inline-block;
-}
+
 .slider-container {
     display: flex;
     flex-direction: row;
@@ -251,20 +249,17 @@ body {
     margin-right: -19px;
     transform: rotate(180deg);
 }
-
+.slider-left-container {
+    padding-left: 70px;
+    margin-right: -15px;
+    width: 470px;
+}
 .slider-text-wrapper {
     display: none;
 }
 .slider-text-wrapper.current {
     display: block;
-    padding-left: 70px;
-    margin-right: -15px;
-    width: 470px;
 }
-
-
-
-
 .slider-images-wrapper {
     display: flex;
     margin: 0;
@@ -330,7 +325,7 @@ body {
 .background-slider-item::before {
     position: absolute;
     z-index: -1;
-    background-color: rgba(252, 252, 252, .4);
+    background-color: #FFCBD8;
     border-radius: 50%;
     content: "";
 }
@@ -534,11 +529,11 @@ body {
 }
 /* ---------------------------------- блог ------------------------------------- */
 .blog-container {
+    background-color: #FFFFFF;
     background-image: url(../images/backgrounds/blog.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 60px -80px;
-    background-color: #FFFFFF;
     border-radius: 16px;
     width: 570px;
     padding-left: 32px;
@@ -617,9 +612,9 @@ body {
 
 /* ---------------------------------- доставка ---------------------------------- */
 .delivery-container {
+    background-color: #FCFCFC;
     background-image: url(../images/backgrounds/delivery.jpg);
     background-position: center;
-    background-color: #EEEEEE;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
@@ -780,8 +775,12 @@ body {
     color: #2D3440;
     text-decoration: none;
 }
-.documents-link-bold {
+.footer-documents-title {
     font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .academy-site-text {
@@ -1578,8 +1577,6 @@ body {
   }
 /* ----------------------------- поповер -------------------------- */
 /* ----------------------------- каталог -------------------------- */
-
-
 .subcatalog-item a{
     margin: 0;
     text-decoration: none;
@@ -1660,4 +1657,205 @@ body {
     display: flex;
 }
 
-/* ----------------------------- login -------------------------- */
+/* ----------------------------- Поиск -------------------------- */
+.navigation-item.search {
+    position: relative;
+}
+.search-container {
+    display: none;
+    position: absolute;
+    width: 356px;
+    background: #FCFCFC;
+    box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+    border-radius: 4px;
+    z-index: 1;
+    top: 40px;
+    left: -324px;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+.search-open {
+    display: block;
+}
+
+/* ----------------------------- Корзина -------------------------- */
+.navigation-item.cart {
+    position: relative;
+}
+.cart-container {
+    display: none;
+    position: absolute;
+    width: 441px;
+    background: #FCFCFC;
+    box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+    border-radius: 4px;
+    z-index: 3;
+    top: 40px;
+    left: -326px;
+    padding: 48px;
+    box-sizing: border-box;
+}
+.cart-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.cart-products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-item .price,
+.total-price,
+.product-name {
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.cart-bottom-wrapper a {
+    text-decoration: none;
+}
+.cart-bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-bottom-wrapper::before {
+    position: absolute;
+    content: "";
+    width: 345px;
+    height: 1px;
+    background-color: #E7E7E7;
+    transform: translateY(-54px);
+}
+.price-description {
+    margin: 0;
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #B9B9B9;
+}
+.cart-image {
+    display: block;
+    border-radius: 50%;
+    margin: 0;
+}
+.cart-left-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.cart-right-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 52px;
+}
+.product-delete-button {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.product-delete-button::before,
+.product-delete-button::after {
+    position: absolute;
+    width: 1.33px;
+    height: 14.14px;
+    bottom: 1.33px;
+    border: none;
+    background-color: #2D3440;
+    border-radius: 1px;
+    content: "";
+}
+.product-delete-button::before {
+    transform: rotate(45deg);
+}
+.product-delete-button::after {
+    transform: rotate(-45deg);
+}
+.cart-open {
+    display: block;
+}
+
+
+.cart-empty-container {
+    display: none;
+    position: absolute;
+    width: 288px;
+    background: #FCFCFC;
+    box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+    border-radius: 4px;
+    z-index: 3;
+    top: 40px;
+    left: -148px;
+    padding: 48px 0;
+    box-sizing: border-box;
+}
+.empty-text {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+.cart-empty-open {
+    display: block;
+}
+/* ----------------------------- Авторизация -------------------------- */
+.navigation-item.auth {
+    position: relative;
+}
+.auth-container {
+    display: none;
+    position: absolute;
+    width: 420px;
+    background: #FCFCFC;
+    box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+    border-radius: 4px;
+    z-index: 3;
+    top: 40px;
+    left: -332px;
+    padding: 48px;
+    padding-bottom: 52px;
+    box-sizing: border-box;
+}
+.auth-title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+.field-group.password {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.auth-bottom-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 23px;
+}
+.auth-link,
+.auth-link a {
+    margin: 0;
+    color: #2D3440;
+}
+.auth-open {
+    display: block;
+}
