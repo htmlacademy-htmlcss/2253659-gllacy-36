@@ -529,11 +529,11 @@ body {
 }
 /* ---------------------------------- блог ------------------------------------- */
 .blog-container {
+    background-color: #FFFFFF;
     background-image: url(../images/backgrounds/blog.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 60px -80px;
-    background-color: #FFFFFF;
     border-radius: 16px;
     width: 570px;
     padding-left: 32px;
@@ -612,9 +612,9 @@ body {
 
 /* ---------------------------------- доставка ---------------------------------- */
 .delivery-container {
+    background-color: #FCFCFC;
     background-image: url(../images/backgrounds/delivery.jpg);
     background-position: center;
-    background-color: #EEEEEE;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
