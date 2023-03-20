@@ -564,8 +564,8 @@ body {
     background-color: #FFFFFF;
     background-image: url(../images/backgrounds/blog.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 60px -80px;
+    background-size: 110%;
+    background-position: 5px -100px;
     border-radius: 16px;
     width: 570px;
     padding-left: 32px;
@@ -651,7 +651,9 @@ body {
 .delivery-container {
     background-color: #FCFCFC;
     background-image: url(../images/backgrounds/delivery.jpg);
-    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 18px -130px;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
