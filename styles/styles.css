@@ -63,7 +63,13 @@ body {
     background-color: #FEAFC3;
     color: #2D3440;
 }
-
+/* -------------- отступы для всей страницы, чтобы не прилипало к краям -------------- */
+.all-page-container {
+    width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 /* ---------------------------------- блок main ------------------------------- */
 .main-container {
     flex-grow: 1;
@@ -80,8 +86,18 @@ body {
     text-align: center;
     color: #2D3440;
 }
+.contact-phone {
+    display: block;
+    width: 148px;
+    padding: 8px 0;
+    margin-right: 16px;
+}
+.contact-phone:hover {
+    color: #FCFCFC;
+}
 .navigation-user {
     font-size: 14px;
+    transform: translateY(1px);
 }
 .navigation-user .navigation-link {
     position: relative;
@@ -91,7 +107,9 @@ body {
 .logo {
     display: block;
 }
-
+.logo:hover {
+    opacity: 70%;
+}
 
 /* -------------------------------- хедер ------------------------------------- */
 .header-container {
@@ -102,7 +120,7 @@ body {
     padding: 24px 0;
 }
 
-.navigation-list{
+.navigation-list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -117,13 +135,16 @@ body {
 }
 .user-navigation-wrapper {
     display: flex;
+    width: 431px;
+    align-items: flex-start;
     justify-content: flex-end;
     margin-left: auto;
+    transform: translateX(-2px);
 }
 .navigation-user {
     justify-content: flex-end;
     margin-left: auto;
-    gap: 0 16px;
+    gap: 16px;
 }
 
 .navigation-user .navigation-link {
@@ -173,6 +194,7 @@ body {
     flex-direction: column;
     width: 1170px;
     margin: 0 auto;
+    padding: 0;
     gap: 80px;
 }
 
@@ -202,7 +224,7 @@ body {
     text-align: center;
     color: #2D3440;
     background-color: #FCFCFC;
-    outline: 4px solid rgba(252, 252, 252, 0.4);
+    box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
     border-radius: 26px;
     text-decoration: none;
     border: none;
@@ -232,8 +254,7 @@ body {
     height: 38px;
     background-color: rgba(252, 252, 252, 0.3);
     border-radius: 50%;
-    outline: 2px solid #FCFCFC;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #FCFCFC inset;
     z-index: 2;
 }
 .slider-icon {
@@ -277,6 +298,7 @@ body {
     margin: 0;
 }
 .social {
+    width: 150px;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -284,13 +306,15 @@ body {
     gap: 16px;
     list-style-type: none;
 }
-
+.slider-bottom .social {
+    justify-content: flex-end;
+}
 .social-item a {
     display: block;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    outline: 2px solid rgb(252, 252, 252, .3);
+    box-shadow: 0 0 0 2px rgb(252, 252, 252, .3);
 }
 
 .slider-pagination {
@@ -355,6 +379,8 @@ body {
 }
 .sale-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
     justify-content: space-between;
 }
 .sale-item-title {
@@ -374,14 +400,17 @@ body {
     width: 570px;
 }
 .sale-item-text {
-    margin: 36px;
-    margin-right: 11px;
+    margin-top: auto;
+    padding: 36px;
+    padding-right: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
+    row-gap: 28px;
+    align-items: flex-start;
 }
-
+.sale-item-image {
+    margin-top: auto;
+}
 /* ------------------------- популярные вкусы ----------------------------------- */
 .popular-container {
     margin: 0;
@@ -392,7 +421,9 @@ body {
 .product-card-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 67px;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -441,6 +472,7 @@ body {
     line-height: 24px;
     font-weight: 700;
     margin: 0;
+    transform: translateY(4px);
 }
 .product-card-image {
     display: block;
@@ -510,16 +542,16 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-.advantages-item-icon.cow{
+.advantages-item-icon.cow {
     background-image: url(../images/about-icons/cow.svg);
 }
-.advantages-item-icon.ice-cream{
+.advantages-item-icon.ice-cream {
     background-image: url(../images/about-icons/ice-cream.svg);
 }
-.advantages-item-icon.thermometer{
+.advantages-item-icon.thermometer {
     background-image: url(../images/about-icons/thermometer.svg);
 }
-.advantages-item-icon.leaf{
+.advantages-item-icon.leaf {
     background-image: url(../images/about-icons/leaf.svg);
 }
 /* ----------------- общий контейнер для блога и рассылки----------------------- */
@@ -559,6 +591,10 @@ body {
 .blog-container a {
     text-decoration: none;
 }
+.blog-title-link:hover h2{
+    color: #FF2F64;
+}
+
 
 /* ---------------------------------- рассылка ---------------------------------- */
 .newsletter-container {
@@ -577,6 +613,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 20px;
     background-color: #FFFFFF;
     border-radius: 16px;
     margin: 0;
@@ -594,7 +631,7 @@ body {
     padding: 12px 32px;
     color: #FCFCFC;
     background-color: #FF2F64;
-    outline: 4px solid rgba(255, 47, 100, 0.3);
+    box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3);
     border: none;
     border-radius: 26px;
     box-sizing: border-box;
@@ -623,10 +660,12 @@ body {
     box-sizing: border-box;
 }
 .delivery-title {
+    width: 371px;
     font-size: 32px;
     line-height: 46px;
     font-weight: 900;
     margin: 0;
+    transform: translateY(3px);
 }
 .delivery-description,
 .delivery-form-description {
@@ -650,7 +689,7 @@ body {
     width: 371px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 27px;
     align-self: center;
 }
 .delivery-form-wrapper {
@@ -714,6 +753,9 @@ body {
     color: #2D3440;
     margin: 0;
 }
+.contacts-phone-number:hover {
+    color: #FF2F64;
+}
 .working-time {
     display: block;
     font-size: 14px;
@@ -745,16 +787,21 @@ body {
 }
 .inner-footer-container {
     border-top: 1px solid rgb(252, 252, 252, .3);
+    transform: translateY(-3px);
+}
+.inner-footer-container .footer-documents{
+    transform: translateY(-3px);
 }
 .documents-list {
     position: relative;
     display: grid;
     grid-template-columns: max-content max-content;
     column-gap: 24px;
-    row-gap: 8px;
+    row-gap: 6px;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transform: translateX(-11px);
 }
 .documents-list::before {
     position: absolute;
@@ -775,12 +822,16 @@ body {
     color: #2D3440;
     text-decoration: none;
 }
+.documents-list a:hover {
+    color: #FCFCFC;
+}
 .footer-documents-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     margin: 0;
     padding: 0;
+    transform: translateY(2px);
 }
 
 .academy-site-text {
@@ -796,7 +847,13 @@ body {
     border-bottom: 1px solid #565C66;
 }
 
-
+.academy-site-text a:hover {
+    color: #FCFCFC;
+    border-color: #FCFCFC;
+}
+.academy-logo:hover {
+    opacity: 70%;
+}
 /* ------------------------------- СТРАНИЦА КАТАЛОГА ------------------------------- */
 /* ------------------------------- sticky footer ----------------------------------- */
 .main-inner {
@@ -816,6 +873,9 @@ body {
     margin: 0;
     margin-top: 32px;
     padding: 0;
+}
+.breadcrumbs a[href]:hover {
+    color: #FCFCFC;
 }
 .breadcrumbs-item {
     position: relative;
@@ -855,7 +915,9 @@ body {
 }
 
 /* -------------------------------------------- форма ------------------------------- */
-
+.catalog-filter-group.price legend {
+    transform: translate(7px, 0);
+}
 .catalog-filter {
     display: flex;
     flex-wrap: wrap;
@@ -864,10 +926,11 @@ body {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 95px;
+    transform: translateY(-2px);
 }
 .form-apply-button {
     background-color: rgba(252, 252, 252, 0.3);
-    outline: 2px solid #FCFCFC;
+    box-shadow: 0 0 0 2px #FCFCFC;
     border: none;
     padding: 8px 52.5px;
     font-family: inherit;
@@ -876,11 +939,15 @@ body {
     line-height: 20px;
     border-radius: 20px;
 }
+.catalog-filter-button {
+    transform: translate(4px, -2px);
+}
 .catalog-products .product-card-list {
     margin-top: 44px;
     display: grid;
     grid-template-columns: repeat(4, 270px);
     gap: 91px 30px;
+    transform: translateY(-1px);
 }
 
 /* -------------------------------------------- пагинация ----------------------------- */
@@ -890,14 +957,13 @@ body {
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    width: 200px;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 /* для выравнивания элементов по space-between */
 .pagination-empty {
-    width: 200px;
+    width: 153px;
 }
 .catalog-filter-list {
     display: flex;
@@ -939,7 +1005,7 @@ body {
 }
 
 .pagination-link.current {
-    background-color: #fcfcfc;
+    background-color: #FCFCFC;
     pointer-events: none;
 }
 .pagination-prev,
@@ -961,10 +1027,6 @@ body {
 .pagination-next {
     margin-left: 8px;
 }
-.pagination-disabled {
-    pointer-events: none;
-    opacity: 50%;
-}
 
 .pagination-wrapper {
     display: flex;
@@ -972,6 +1034,7 @@ body {
     margin-top: 16px;
     margin-bottom: 40px;
     padding: 41px 0;
+    transform: translateY(-1px);
 }
 
 /* -------------- скрываем невидимые элементы ------------- */
@@ -986,16 +1049,16 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
   /* --------------------- стиль для всех кнопок ----------- */
-  .button {
+.button {
     display: inline-block;
     border: none;
     cursor: pointer;
-  }
-  .social li {
+}
+.social li {
     cursor: pointer;
-  }
+}
 
 
 /* ----------------------- интерактивные элементы ------------ */
@@ -1007,13 +1070,13 @@ body {
 }
 .navigation-link:focus {
     background-color: rgba(252, 252, 252, 0.5);
-    outline: 2px solid #2D3440;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #2D3440 inset;
     border-radius: 30px;
+    outline: none;
 }
 .navigation-link:active {
     background-color:#FCFCFC;
-    outline: none;
+    box-shadow: none;
     border-radius: 30px;
 }
 .navigation-link.current {
@@ -1028,13 +1091,13 @@ body {
     background-color: rgba(255, 74, 120, .6);
 }
 .navigation-link.current:focus {
-    outline: 2px solid #2D3440;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #2D3440 inset;
     background-color: #FF4A78;
+    outline: none;
 }
 .navigation-link.current:active {
     background-color: rgba(255, 74, 120, .3);
-    outline: none;
+    box-shadow: none;
 }
 /* ----------------------- слайдер ------------ */
 .slider-button:hover {
@@ -1045,15 +1108,15 @@ body {
 }
 .slider-button:focus {
     background-color: rgba(252, 252, 252, .3);
-    outline: 2px solid #2D3440;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #2D3440 inset;
+    outline: none;
 }
 .slider-button:focus .slider-icon {
     fill: #2D3440;
 }
 .slider-button:active {
     background-color: rgba(252, 252, 252, .5);
-    outline: none;
+    box-shadow: none;
 }
 .slider-button:disabled {
     opacity: 40%;
@@ -1061,90 +1124,95 @@ body {
 /* ----------------------- слайдер-пагинация ------------ */
 .slider-pagination-button:hover {
     background-color: rgba(252, 252, 252, .3);
-    outline: 1px solid #FCFCFC;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #FCFCFC inset;
 }
 .slider-pagination-button:focus {
     background-color: rgba(252, 252, 252, .3);
-    outline: 1px solid #2D3440;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #2D3440 inset;
+    outline: none;
 }
 .slider-pagination-button:active {
     background-color: rgba(252, 252, 252, .4);
-    outline: none;
+    box-shadow: none;
 }
 /* ----------------------- белая кнопка ------------ */
 .main-button:hover {
     background-color: rgba(252, 252, 252, .4);
-    outline-color: #FCFCFC;
+    box-shadow: 0 0 0 4px #FCFCFC;
 }
 .main-button:focus {
     background-color: rgba(252, 252, 252, .5);
-    outline: 2px solid #2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
+    outline: none;
 }
 .main-button:active {
     background-color: #FCFCFC;
-    outline: 2px solid #2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
 }
 .main-button:disabled {
     background-color: #E7E7E7;
-    outline: 4px solid rgba(252, 252, 252, .4);
+    box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
     color: #B9B9B9;
 }
 /* ----------------------- красная кнопка ------------ */
 .form-button:hover {
     background-color: rgba(252, 252, 252, .3);
-    outline-color: #FF2F64;
+    box-shadow: 0 0 0 4px #FF2F64;
     color: #2D3440;
 }
 
 .form-button:focus {
     background-color: #FF2F64;
-    outline: 2px solid #2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
     color: #FCFCFC;
+    outline: none;
 }
 .form-button:active {
     background-color: #FEAFC3;
-    outline: 2px solid #2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
     color: #FCFCFC;
 }
 
 .form-button:disabled {
     background-color: #B9B9B9;
-    outline: 4px solid rgba(185, 185, 185, .3);
+    box-shadow: 0 0 0 4px rgba(185, 185, 185, .3);
     color: #565C66;
 }
 /* ----------------------- прозрачная кнопка ------------ */
 .form-apply-button:hover {
     background-color: #FCFCFC;
-    outline: 2px solid rgba(252, 252, 252, .3)
+    box-shadow: 0 0 0 2px rgba(252, 252, 252, .3)
 }
 .form-apply-button:focus {
     background-color: rgba(252, 252, 252, .3);
-    outline: 2px solid #2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
+    outline: none;
 }
 .form-apply-button:active {
     background-color: rgba(252, 252, 252, .5);
-    outline: none;
+    box-shadow: none;
 }
 .form-apply-button:disabled {
     background-color: rgba(252, 252, 252, .3);
-    outline: 2px solid #FCFCFC;
+    box-shadow: 0 0 0 2px #FCFCFC;
     color: #2D3440;
     opacity: 40%;
 }
 /* ----------------------- кнопки социальных сетей ------------ */
 .social-button:hover {
-    outline-color:rgb(252, 252, 252, .5);
+    box-shadow: 0 0 0 2px rgb(252, 252, 252, .5);
     background-color: #2D3440;
+    outline: none;
 }
 .social-button:focus {
-    outline-color:#2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
     background-color: #2D3440;
+    outline: none;
 }
 .social-button:active {
     background-color: #2D3440;
     opacity: 50%;
+    box-shadow: 0 0 0 2px rgb(252, 252, 252, .5);
     outline: none;
 }
 
@@ -1155,36 +1223,34 @@ body {
 
 .product-card-button:hover {
     background-color: rgba(252, 252, 252, .3);
-    outline: 2px solid #FF2F64;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #FF2F64 inset;
 }
-.product-card-button:hover .cart-icon{
+.product-card-button:hover .cart-icon {
     fill: #2D3440;
 }
 
 .product-card-button:focus {
     background-color: #FF2F64;
-    outline: 2px solid #2D3440;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #2D3440 inset;
+    outline: none;
 }
-.product-card-button:focus .cart-icon{
+.product-card-button:focus .cart-icon {
     fill: #FCFCFC;
 }
 
 .product-card-button:active {
     background-color: #FFCBD8;
-    outline: 2px solid #FF2F64;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #FF2F64 inset;
 }
-.product-card-button:active .cart-icon{
+.product-card-button:active .cart-icon {
     fill: #2D3440;
 }
 
 .product-card-button:disabled {
     background-color: #B9B9B9;
-    outline: none
+    box-shadow: none;
 }
-.product-card-button:disabled .cart-icon{
+.product-card-button:disabled .cart-icon {
     fill: #565C66;
 }
 /* ------------------ пагинация на странице каталога ------------ */
@@ -1194,21 +1260,26 @@ body {
 
 .pagination-link:focus {
     background-color: rgba(252, 252, 252, .3);
-    outline: 1px solid #2D3440;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #2D3440 inset;
+    outline: none;
 }
 .pagination-link:active {
     background-color: rgba(252, 252, 252, .5);
-    outline: 1px solid #FCFCFC;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #FCFCFC inset;
 }
-
-
+.pagination-prev[href]:hover,
+.pagination-next[href]:hover {
+    opacity: 70%;
+}
+.pagination-prev:not([href]),
+.pagination-next:not([href]) {
+    opacity: 30%;
+    cursor: auto;
+}
 /* ----------------------------- ФОРМЫ -------------------------- */
 .field {
     padding: 14px 16px;
-    outline: 1px solid #B9B9B9;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #B9B9B9 inset;
     border: none;
     border-radius: 4px;
     box-sizing: border-box;
@@ -1217,40 +1288,41 @@ body {
     line-height: 20px;
     font-weight: 400;
     color: #2D3440;
+    outline: none;
 }
 .field::placeholder {
     color: #B9B9B9;
 }
 .field:hover {
-    outline: 1px solid #2D3440;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #2D3440 inset;
+    outline: none;
 }
 .field:focus {
-    outline: 2px solid #2D3440;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #2D3440 inset;
+    outline: none;
     color: #2D3440;
 }
 
 .field:focus:invalid {
-    outline: 1px solid #EA5454;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #EA5454 inset;
+    outline: none;
     color: #2D3440;
 }
 .field:hover:invalid {
-    outline: 2px solid #EA5454;
-    outline-offset: -2px;
+    box-shadow: 0 0 0 2px #EA5454 inset;
+    outline: none;
     color: #2D3440;
 }
 .field:disabled {
     background-color:#E7E7E7;
-    outline: 1px solid #B9B9B9;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #B9B9B9 inset;
+    outline: none;
     color: rgba(45, 52, 64, .5);
 }
 .field:hover:disabled {
     background-color:#E7E7E7;
-    outline: 1px solid #B9B9B9;
-    outline-offset: -1px;
+    box-shadow: 0 0 0 1px #B9B9B9 inset;
+    outline: none;
     color: #2D3440;
 }
 
@@ -1307,7 +1379,7 @@ body {
     border-bottom: 1px solid #B9B9B9;
     left: -6px;
     top: 11px
-  }
+}
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
@@ -1334,6 +1406,8 @@ body {
     border-radius: 8px;
     width: 570px;
     box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 100vh;
 }
 .modal-close-button {
     position: absolute;
@@ -1428,21 +1502,25 @@ body {
 .range-toggle:hover.range-toggle::after {
     background-color: #2D3440;
 }
+
+.range-toggle:focus {
+    background-color: #FCFCFC;
+    box-shadow: 0 0 0 2px #2D3440 inset;
+    outline: none;
+}
+.range-toggle:focus.range-toggle::after {
+    background-color: #2D3440;
+    outline: none;
+}
+
 .range-toggle:active {
     background-color: #2D3440;
 }
 .range-toggle:active.range-toggle::after {
     background-color: #2D3440;
 }
-.range-toggle:focus {
-    background-color: #FCFCFC;
-    outline: 2px solid #2D3440;
-}
-.range-toggle:focus.range-toggle::after {
-    background-color: #2D3440;
-}
 .toggle-min {
-    left: -13px;
+    left: -16px;
 }
 .toggle-max {
     left: 56px;
@@ -1508,6 +1586,12 @@ body {
 .control-input:checked:hover + .control-mark::before {
     background-color: #FCFCFC;
 }
+.control-input:focus~.control-label {
+    color: #FCFCFC;
+}
+.control-input:hover~.control-label {
+    color: #565C66;
+}
 /* ----------------------------- ЧЕКБОКСЫ -------------------------- */
 .control-input[type="checkbox"] + .control-mark {
     position: absolute;
@@ -1549,10 +1633,10 @@ body {
     align-items: center;
     width: 196px;
     margin-right: auto;
-  }
+}
 
   /* Control */
-  .select-control {
+.select-control {
     width: 100%;
     padding: 8px 16px;
     padding-right: 48px;
@@ -1564,20 +1648,20 @@ body {
     background-repeat: no-repeat;
     background-position: right 16px center;
     appearance: none;
-  }
+}
 
-  .select-control:hover {
+.select-control:hover {
     background-color: rgba(252, 252, 252, .5)
-  }
+}
 
-  .select-control:focus {
-    outline: 2px solid #FCFCFC;
-    outline-offset: -2px;
+.select-control:focus {
+    box-shadow: 0 0 0 2px #FCFCFC inset;
     background-color: rgba(252, 252, 252, .4);
-  }
+    outline: none;
+}
 /* ----------------------------- поповер -------------------------- */
 /* ----------------------------- каталог -------------------------- */
-.subcatalog-item a{
+.subcatalog-item a {
     margin: 0;
     text-decoration: none;
     font: inherit;
@@ -1626,6 +1710,7 @@ body {
 .subcatalog-link:focus {
     background-color: #FF4A78;
     color: #FCFCFC;
+    box-shadow: none;
     outline: none;
 }
 .subcatalog-link:active {
